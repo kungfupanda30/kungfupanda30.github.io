@@ -669,13 +669,8 @@ a.profile{
     .home__blob{
         width: 300px;
     }
-    .swiper-button-next{
-        transform: translateX(1rem);
-
-    }
-    .swiper-button-prev{
-        transform: translateX(-1rem);
-
+    .swiper-portfolio-icon{
+        display: none;
     }
 }
 
