@@ -635,15 +635,8 @@ a.profile{
     .home__blob{
         width: 180px;
     }
-   
-    
-    .swiper-button-next{
-        transform: translateX(1rem);
-
-    }
-    .swiper-button-prev{
-        transform: translateX(-1rem);
-
+    .swiper-portfolio-icon{
+        display: none;
     }
 }
 
@@ -669,8 +662,14 @@ a.profile{
     .home__blob{
         width: 300px;
     }
-    .swiper-portfolio-icon{
-        display: none;
+   
+    .swiper-button-next{
+        transform: translateX(1rem);
+
+    }
+    .swiper-button-prev{
+        transform: translateX(-1rem);
+
     }
 }
 
