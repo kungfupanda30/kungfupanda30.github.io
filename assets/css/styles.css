@@ -88,7 +88,6 @@ body.dark-theme{
 .nav__btns{
     display: flex;
     align-items: center;
-    margin-right: 3rem;
 
 }
 
@@ -631,15 +630,38 @@ a.profile{
         grid-template-columns: .25fr 3fr;
 
     }
-
+   
     .home__blob{
         width: 180px;
     }
-    .swiper-portfolio-icon{
+   
+    .uil-arrow-right{
         display: none;
     }
+    .swiper-button-next{
+        display:none;
+    }
+    .swiper-button-prev{
+        display:none;
+    }
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
-
+@media screen and (max-width:567px) {
+    .swiper-button-next{
+        display:none;
+    }
+    .swiper-button-prev{
+        display:none;
+    }
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
 /* For medium devices */
 @media screen and (min-width: 568px) {
     .home__content{
@@ -649,6 +671,7 @@ a.profile{
     .home__data{
         grid-column: initial;
     }
+    
 
     .home__img{
         order: 1;
@@ -662,15 +685,9 @@ a.profile{
     .home__blob{
         width: 300px;
     }
-   
-    .swiper-button-next{
-        transform: translateX(1rem);
+    
 
-    }
-    .swiper-button-prev{
-        transform: translateX(-1rem);
-
-    }
+    
 }
 
 @media screen and (min-width: 768px){
@@ -947,4 +964,9 @@ output {
   .showBtn {
     opacity: 1;
     transform: translateY(0)
+  }
+
+  input:focus{
+      outline: none;
+      border: none;
   }
