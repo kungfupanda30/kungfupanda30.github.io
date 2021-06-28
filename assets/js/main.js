@@ -258,7 +258,6 @@ sr.reveal('.home__social',{ interval: 200});
 
 
 sr.reveal('.section__title',{delay: 600}); 
-sr.reveal('.home__subtitle',{ interval: 800}); 
 
 sr.reveal('.about__description',{delay: 800}); 
 /*SCROLL CONTACT*/
