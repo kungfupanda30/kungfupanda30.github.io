@@ -615,7 +615,7 @@ a.profile{
         margin-right: auto;
     } */
     .home__scroll{
-        transform: translateY(1rem);
+        transform: translateY(1.25rem);
     }
     .home__data{
         overflow: visible;
