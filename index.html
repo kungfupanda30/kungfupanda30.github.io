@@ -449,6 +449,11 @@
 
 
         <!--==================== MAIN JS ====================-->
+        <script>
+            var host = "sanghamitrabiswas.com.github.io";
+            if ((host == window.location.host) && (window.location.protocol != "https:"))
+                window.location.protocol = "https";
+        </script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
         <script src="assets/js/main.js"></script>
     </body>
