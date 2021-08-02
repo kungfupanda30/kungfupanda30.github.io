@@ -261,6 +261,11 @@ sr.reveal('.section__title',{delay: 600});
 
 sr.reveal('.about__description',{delay: 800}); 
 /*SCROLL CONTACT*/
+sr.reveal('.player',{delay: 400}); 
+sr.reveal('.podcast__subtitle',{delay: 600}); 
+sr.reveal('.icon-bar',{delay: 800}); 
+
+
 sr.reveal('.contact__input',{interval: 200}); 
 sr.reveal('.footer__title',{delay: 200}); 
 sr.reveal('.footer__subtitle',{ interval: 200}); 
