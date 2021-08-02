@@ -990,17 +990,12 @@ output {
 
 }
 
-.tileMe li {
-      display: inline;
-    float: left;
-    text-align: center;
-    vertical-align: middle;
-
+.podcast__icon{
+    font-size: 2rem;
 }
 
 .icon-bar {
   width: 100%;
-  
   overflow: auto;
 }
 
