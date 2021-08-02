@@ -193,8 +193,6 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-
 }
 
 .nav__logo,
@@ -256,7 +254,7 @@ img{
 }
 
 .nav__icon{
-    font-size: 1.2rem;
+    font-size: 1.75rem;
 }
 
 .nav__close{
@@ -793,7 +791,7 @@ a.profile{
         align-items: center;
     }
     .footer__container{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: max-content;
     }
     .footer__bg{
         padding: 3rem 0 3.5rem;
@@ -984,3 +982,47 @@ output {
       outline: none;
       border: none;
   }
+
+
+.podcasts{
+    font-size: var(--h2-font-size);
+    text-align: center;
+
+}
+
+.tileMe li {
+      display: inline;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.icon-bar {
+  width: 100%;
+  
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 2rem 0;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: var(--first-color-lighter);
+  color: black;
+}
+
+.podcast__subtitle{
+    display: block;
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-1);
+    text-align: center;
+    color:var(--text-color);
+}
