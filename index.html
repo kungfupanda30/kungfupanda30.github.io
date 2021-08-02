@@ -35,6 +35,8 @@
 
         <!--==================== UNICONS ====================-->
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
         <!--==================== SWIPER CSS ====================-->
@@ -58,22 +60,27 @@
         			<ul class="nav__list grid">
         				<li class="nav__item">
         					<a href="#home" style="text-decoration: none;" class="nav__link active-link">
-        						<i class="uil uil-estate nav__icon"></i> Home
+        						<i class='bx bxs-home nav__icon'></i> Home
         					</a>
         				</li>
         				<li class="nav__item">
         					<a href="#portfolio" style="text-decoration: none;" class="nav__link">
-        						<i class="uil uil-edit-alt nav__icon"></i> Writing
+        						<i class='bx bx-edit-alt nav__icon' ></i> Writing
         					</a>
         				</li>
         				<li class="nav__item">
         					<a href="#about" style="text-decoration: none;" class="nav__link">
-        						<i class="uil uil-user nav__icon"></i> About
+        						<i class='bx bxs-user nav__icon' ></i> About
         					</a>
         				</li>
+                        <li class="nav__item">
+                            <a href="#podcast" style="text-decoration: none;" class="nav__link">
+                                <i class='bx bx-podcast nav__icon'></i>Podcasts
+                            </a>
+                        </li>
         				<li class="nav__item">
         					<a href="#contact" style="text-decoration: none;" class="nav__link">
-        						<i class="uil uil-message nav__icon"></i> Contact Me
+        						<i class='bx bxs-contact nav__icon' ></i> Contact Me
         					</a>
         				</li>
                         
@@ -193,7 +200,7 @@
             <!--==================== PORTFOLIO ====================-->
             <section class="portfolio section" id="portfolio">
                 <h1 class="section__title">
-                    Writing
+                    WRITING
                 </h1>
                 <span class="section__subtitle">Most Recent Work</span>
                 <div class="portfolio__container container swiper-container">
@@ -320,10 +327,36 @@
                 </div>
                 
             </section>
+            <!--==================== PODCAST ====================-->
+            <section class="podcast section" id="podcast">
+                <h1 class="section__title">PODCASTS</h1>
+                
+                <div class="podcast__container container grid">
+                    <div>
+                        <iframe class="player" src="https://anchor.fm/kaleidoscope-everchanging/embed" height="102px" width="100%" frameborder="0" scrolling="no">
+                        </iframe>
+                    </div>
+                    <span class="podcast__subtitle">Where to Listen</span>
+                    <div class="icon-bar">
+                        <a class="podcast__icon" href="https://open.spotify.com/show/1ESmgkNRIjJYvg0k7RhLUd">
+                            <i class='bx bxl-spotify'></i> 
+                        </a>  
+                        <a class="podcast__icon" href="https://open.spotify.com/show/1ESmgkNRIjJYvg0k7RhLUd">
+                            <i class='bx bxl-google'></i>
+                        </a>  
+                        <a class="podcast__icon" href="https://anchor.fm/kaleidoscope-everchanging">
+                            <i class='bx bx-anchor'></i>                        
+                        </a>
+                        <a class="podcast__icon" href="https://anchor.fm/s/63fc6878/podcast/rss">
+                            <i class='bx bx-rss' ></i>
+                        </a>
+                    </div>                
+                </div>                
+            </section>
             <!--==================== ABOUT ====================-->
 
             <section class="about section" id="about">
-                <h1 class="section__title">About</h1>
+                <h1 class="section__title">ABOUT</h1>
                 <div class="about__container container grid">
                     <div class="home__img">
                         <svg class="home__blob" viewBox="0 0 200 187" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
@@ -363,7 +396,7 @@
             </section>
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact">
-                <h1 class="section__title"> Leave a Message</h1>
+                <h1 class="section__title"> LEAVE A MESSAGE</h1>
                 <span class="section__subtitle">Or say Hi!</span>
                 <div class="contact__container container grid">
                     <form action="https://formspree.io/f/mwkabbog"
@@ -421,6 +454,9 @@
                             <a style="text-decoration: none;" href="#portfolio" class="footer__link">Writing</a>
                         </li>
                         <li>
+                            <a style="text-decoration: none;" href="#podcast" class="footer__link">Podcasts</a>
+                        </li>
+                        <li>
                             <a style="text-decoration: none;" href="#about" class="footer__link">About</a>
                         </li>
                         <li>
@@ -438,6 +474,9 @@
                         <a style="text-decoration: none;" href="https://twitter.com/thecurrlygal" target="_blank" class="footer__social">
                             <i class="uil uil-twitter-alt"></i>
                         </a>
+                        <a style="text-decoration: none;" href="https://pinterest.com/thecurrlygal" target="_blank" class="footer__social">
+                            <i class='bx bxl-pinterest-alt'></i>
+                        </a>
                     </div>
                 </div>
 
@@ -449,7 +488,7 @@
             
         </footer>
         
-        <!--==================== scrooll up ====================-->
+        <!--==================== scroll up ====================-->
         <button class="scrollToTopBtn">☝️</button>
 
         <!--==================== SWIPER JS ====================-->
