@@ -639,10 +639,6 @@ a.profile{
     .home__blob{
         width: 180px;
     }
-   
-    .uil-arrow-right{
-        display: none;
-    }
     .swiper-button-next{
         display:none;
     }
