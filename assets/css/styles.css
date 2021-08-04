@@ -445,12 +445,12 @@ a.profile{
 
 .portfolio__content{
     padding: 0 1.5rem;
-
 }
+
 .portfolio__img{
-    width: 265px;
+    width: 100%;
     border-radius: .5rem;
-    justify-self: center;
+    margin: auto;
 }
 
 .portfolio__title{
@@ -633,7 +633,6 @@ a.profile{
 
     .home__content{
         grid-template-columns: .25fr 3fr;
-
     }
    
     .home__blob{
@@ -648,6 +647,9 @@ a.profile{
     .container{
         margin-left: auto;
         margin-right: auto;
+    }
+    .portfolio__button{
+        display: none;
     }
 }
 @media screen and (max-width:567px) {
@@ -694,8 +696,9 @@ a.profile{
         margin-left: auto;
         margin-right: auto;
     }
-
-    
+    .portfolio__button{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 768px){
