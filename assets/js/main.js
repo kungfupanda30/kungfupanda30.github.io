@@ -160,7 +160,7 @@ var i = 0,
 
 // Typerwrite text content. Use a pipe to indicate the start of the second line "|".  
 var textArray = [
-  "Hi, I'm Sanghamitra Biswas !|I am an IT engineer", 
+  "Hi, I'm Sanghamitra Biswas !|I am a Software Engineer", 
   
 ];
 
@@ -270,5 +270,12 @@ sr.reveal('.contact__input',{interval: 200});
 sr.reveal('.footer__title',{delay: 200}); 
 sr.reveal('.footer__subtitle',{ interval: 200}); 
 sr.reveal('.footer__links',{delay: 400}); 
-sr.reveal('.footer__socials',{ interval: 600}); 
+sr.reveal('.footer__socials',{ interval: 600});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var yearSpan = document.getElementById('copyright-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+});
 
