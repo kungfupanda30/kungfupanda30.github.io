@@ -22,9 +22,9 @@ jobs:
         run: npm run build --if-present
 
       - name: Upload artifact for GitHub Pages
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: './build'
 
   deploy:
     needs: build
@@ -32,7 +32,10 @@ jobs:
     permissions:
       pages: write
       id-token: write
-      contents: read
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        id: deployment
+        uses: actions/deploy-pages@v4
