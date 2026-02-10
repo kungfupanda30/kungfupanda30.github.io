@@ -1,0 +1,276 @@
+.career {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(6, 182, 212, 0.05));
+  position: relative;
+}
+
+/* ===== VERTICAL TIMELINE ===== */
+.vertical-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Center line */
+.vertical-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-card-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  z-index: 1;
+}
+
+.timeline-card {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  background: var(--bg-white);
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--border-color);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+
+/* initial off-screen positions (odd -> left, even -> right) */
+.timeline-card-wrapper:nth-child(odd) .timeline-card { transform: translateX(-48px); }
+.timeline-card-wrapper:nth-child(even) .timeline-card { transform: translateX(48px); }
+
+@keyframes slideFromLeft {
+  from { opacity: 0; transform: translateX(-48px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideFromRight {
+  from { opacity: 0; transform: translateX(48px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* animate when wrapper receives the in-view class — use per-item --delay */
+.timeline-card-wrapper.in-view:nth-child(odd) .timeline-card {
+  animation: slideFromLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--delay, 0s);
+}
+.timeline-card-wrapper.in-view:nth-child(even) .timeline-card {
+  animation: slideFromRight 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+  border-color: var(--card-color);
+}
+
+/* Timeline dot on center line */
+
+/* Small anchor dot on the center line for each timeline stop */
+.timeline-center-dot {
+  position: absolute;
+  left: 50%;
+  top: 1.6rem; /* position near top of card wrapper */
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--dot-color, var(--primary-color));
+  border: 3px solid var(--bg-white);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  z-index: 4;
+}
+
+.card-content {
+  margin: 0;
+}
+
+.card-header {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--card-color);
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 0.6rem 0;
+}
+
+.total-experience {
+  margin-top: 0.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+}
+
+.card-company {
+  font-size: 1.05rem;
+  color: var(--card-color);
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(124, 58, 237, 0.03);
+  border-radius: 0.85rem;
+  border-left: 4px solid var(--card-color);
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.meta-label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.meta-value {
+  font-size: 0.9rem;
+  color: var(--card-color);
+  font-weight: 700;
+}
+
+.card-description {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin: 1.5rem 0;
+}
+
+.skills-section {
+  margin-top: 1.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  background: rgba(255,255,255,0.92);
+  color: var(--text-dark);
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: all 0.18s ease;
+  border: 1px solid rgba(15,23,42,0.06);
+  box-shadow: 0 6px 14px rgba(2,6,23,0.03);
+  margin: 0.15rem 0.25rem 0.15rem 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* colored accent using card color */
+.skill-tag::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--card-color, var(--primary-color));
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+  .timeline-card {
+    width: 85%;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .vertical-timeline::before {
+    left: 25px;
+  }
+
+  .timeline-card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 4rem;
+  }
+
+  /* Mobile: make cards slide in from left uniformly */
+  .timeline-card-wrapper:nth-child(odd) .timeline-card,
+  .timeline-card-wrapper:nth-child(even) .timeline-card {
+    transform: translateX(-28px);
+  }
+
+  .timeline-card-wrapper.in-view .timeline-card {
+    animation: slideFromLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--delay, 0s);
+  }
+
+  .timeline-dot {
+    left: 25px;
+    width: 40px;
+    height: 40px;
+    top: 2rem;
+    transform: translate(-50%, -50%);
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .meta-row {
+    justify-content: space-between;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+  }
+
+  .skill-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
