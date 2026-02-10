@@ -145,7 +145,6 @@ const Career = () => {
 
         <div className="vertical-timeline">
           {experiences.map((exp, index) => {
-            const Icon = exp.icon;
             return (
               <div 
                 key={index} 

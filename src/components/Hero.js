@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Github, Linkedin, Globe, ChevronDown } from 'lucide-react';
 import './Hero.css';
 
@@ -7,9 +7,10 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [textIndex, setTextIndex] = useState(0);
 
-  const texts = [
+  const texts = useMemo(() => [
     'Software Engineer',
-    'Problem Solver'  ];
+    'Problem Solver'
+  ], []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -29,7 +30,7 @@ const Hero = () => {
     }, isDeleting ? 40 : 60);
 
     return () => clearTimeout(timer);
-  }, [text, isDeleting, textIndex]);
+  }, [text, isDeleting, textIndex, texts]);
 
   const socialLinks = [
     {
