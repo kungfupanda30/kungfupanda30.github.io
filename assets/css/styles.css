@@ -989,12 +989,11 @@ output {
 
 }
 
-.podcast__icon{
-    font-size: 2rem;
-}
 
 .icon-bar {
-  width: 100%;
+   display: flex;
+   justify-content: center;
+  flex-direction: row;
   overflow: auto;
 }
 
