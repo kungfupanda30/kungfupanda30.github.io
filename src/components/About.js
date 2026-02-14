@@ -22,7 +22,7 @@ const About = () => {
               or enjoying the simple things in life. I'm always open to new opportunities and collaborations.
             </p>
             <div className="about-contact">
-              <a href="mailto:hello@sanghamitrabiswas.com" className="button">
+              <a href="mailto:sangy.987@gmail.com" className="button">
                 <span>Contact Me</span>
                 <ArrowRight size={18} />
               </a>

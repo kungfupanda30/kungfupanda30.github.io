@@ -110,24 +110,6 @@ const Contact = () => {
               </div>
             )}
           </form>
-
-          <div className="contact-info">
-            <h3>Other Ways to Connect</h3>
-            <div className="contact-methods">
-              <a href="mailto:hello@sanghamitrabiswas.com" className="contact-method">
-                <span className="method-label">Email</span>
-                <span className="method-value">hello@sanghamitrabiswas.com</span>
-              </a>
-              <a href="https://linkedin.com/in/sanghamitra-biswas/" target="_blank" rel="noopener noreferrer" className="contact-method">
-                <span className="method-label">LinkedIn</span>
-                <span className="method-value">sanghamitra-biswas</span>
-              </a>
-              <a href="https://github.com/sangy987" target="_blank" rel="noopener noreferrer" className="contact-method">
-                <span className="method-label">GitHub</span>
-                <span className="method-value">sangy987</span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
